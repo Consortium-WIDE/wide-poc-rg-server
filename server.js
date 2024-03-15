@@ -56,11 +56,7 @@ const wideDataService = require('./routes/wideDataService');
 app.use('/wide', cors(wideCorsOptions), wideDataService);
 
 const rgdmService = require('./routes/rgdmService');
-app.use('/rgdm', cors(webCorsOptions), rgdmService);
-
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
+app.use('/rg', cors(webCorsOptions), rgdmService);
 
 // Define Port
 const PORT = process.env.PORT || 3500;
