@@ -105,7 +105,7 @@ router.post('/user/register/:userId', async (req, res) => {
   }
 });
 
-router.get('/user/status', isAuthenticated, async (req, res) => {
+router.get('/user/status', async (req, res) => {
   if (req.session && req.session.userId) {
     const userId = req.session.userId;
 
