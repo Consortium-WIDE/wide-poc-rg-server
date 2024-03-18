@@ -1,6 +1,5 @@
 function isAuthenticated(req, res, next) {
-    if (req.session && req.session.user) {
-        req.user = req.session.user; // Make user data available in the request
+    if (req.session && req.session.userId) {
         next();
     } else {
         console.error('Unauthorized: No valid session');
